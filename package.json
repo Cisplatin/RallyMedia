@@ -1,0 +1,23 @@
+{
+  "name": "z-9",
+  "version": "1.0.0",
+  "description": "An easy website for URL shortening and branding.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cisplatin/RallyMedia.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cisplatin/RallyMedia/issues"
+  },
+  "homepage": "https://github.com/Cisplatin/RallyMedia#readme",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "express": "^4.13.4"
+  }
+}
