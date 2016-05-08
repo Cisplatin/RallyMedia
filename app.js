@@ -24,7 +24,7 @@ app.get('/about', function (req, res) {
 });
 
 app.post('/admin', function (req, res) {
-    console.log(req.body.user);
+    console.log(req.body.article);
 });
 
 app.listen(port, function () {
