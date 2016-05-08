@@ -15,8 +15,12 @@ app.get('/admin', function (req, res) {
     res.sendFile(__dirname + '/public/admin.html');
 });
 
+app.get('/contact', function (req, res) {
+    res.sendFile(__dirname + '/public/contact.html');
+});
+
 app.post('/admin', function (req, res) {
-    console.log(req.body);
+    console.log(req.body.user);
 });
 
 app.listen(port, function () {
