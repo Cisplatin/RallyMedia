@@ -2,6 +2,8 @@
 
 const express = require('express');
 const app = express();
+const Articles = require('./articles');
+const articles = new Articles();
 const bodyParser = require('body-parser');
 
 const port = 3000;
@@ -27,7 +29,9 @@ app.get('/about', function (req, res) {
 
 app.post('/admin', function (req, res) {
     let article = req.body.article;
-    console.log(article);
+    articles.saveArticle(article, (err, id) => {
+        res.send(err || id);
+    });
 });
 
 app.get('/staff', function(req, res) {
