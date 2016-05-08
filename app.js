@@ -30,6 +30,10 @@ app.post('/admin', function (req, res) {
     console.log(article);
 });
 
+app.get('/staff', function(req, res) {
+    res.sendFile(__dirname + '/public/staff.html');
+});
+
 app.listen(port, function () {
     console.log('RallyMedia listening on port ' + port + '.');
 });
