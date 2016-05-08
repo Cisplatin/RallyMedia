@@ -15,6 +15,10 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/robots.txt', function (req, res) {
+    res.sendFile(__dirname + '/public/robots.txt');
+});
+
 app.get('/admin', function (req, res) {
     res.sendFile(__dirname + '/public/admin.html');
 });
