@@ -19,6 +19,10 @@ app.get('/contact', function (req, res) {
     res.sendFile(__dirname + '/public/contact.html');
 });
 
+app.get('/about', function (req, res) {
+    res.sendFile(__dirname + '/public/about.html');
+});
+
 app.post('/admin', function (req, res) {
     console.log(req.body.user);
 });
