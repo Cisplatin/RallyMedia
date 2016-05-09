@@ -30,7 +30,7 @@ app.post('/post_article', function (req, res) {
         res.redirect('/');
     }
     let article = req.body.article;
-    articles.saveArticle(article, (err, id) => {
+    article.saveArticle(article, (err, id) => {
         if (err) {
             return res.render('error', {error: err});
         }
