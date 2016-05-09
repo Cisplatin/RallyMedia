@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 app.use('/bower_components', express.static('bower_components'));
 app.use(ddos.express);
-app.use(require('./routes'));
+app.use(require('./lib/routes'));
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
