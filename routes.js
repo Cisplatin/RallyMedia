@@ -36,6 +36,13 @@ router.route('/article/:id')
             if (err) {
                 return res.render('error', {error: error});
             }
-            res.render('article', article);
+            res.render('article', {
+                article: {
+                    title: article.title,
+                    author: article.author,
+                    createdAt: article.createdAt.toString(),
+                    text: article.text,
+                }
+            });
         });
     });
