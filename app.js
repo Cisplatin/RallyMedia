@@ -29,6 +29,9 @@ app.get('/', function (req, res) {
 });
 
 app.post('/post_article', function (req, res) {
+    if (req.body.article.secret !== process.env.secret) {
+        res.redirect('/');
+    }
     let article = req.body.article;
     articles.saveArticle(article, (err, id) => {
         if (err) {
