@@ -6,7 +6,7 @@
 	}
 
 	.custom-nav {
-		margin-left: 23%;
+		margin-left: 20%;
 		margin-top: 50px;
 	}
 
@@ -40,6 +40,10 @@
 	.custom-nav2 li a{
 		padding-top: 0px;
 		padding-bottom: 0px; 
+	}
+
+	.container {
+		width: 100%;
 	}
 }
 
