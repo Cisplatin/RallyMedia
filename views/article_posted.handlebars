@@ -4,14 +4,14 @@
     {{> head }}
 </head>
 <body>
-<h2>
+<h2 class="text-center">
     Article posted:
-    <a href="/article/{{ article.id }}">
-        {{ article.id }}
+    <a href="/article/{{ article.slug }}">
+        {{ article.title }}
     </a>
+    <small>
+        in {{ article.section }}
+    </small>
 </h2>
-<h3>
-    "{{ article.title }}" in {{ article.section }}
-</h3>
 </body>
 </html>

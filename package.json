@@ -25,6 +25,8 @@
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.5",
     "localenv": "^0.2.2",
-    "mongodb": "^2.1.18"
+    "mongodb": "^2.1.18",
+    "slug": "^0.9.1",
+    "uuid": "^2.0.2"
   }
 }
