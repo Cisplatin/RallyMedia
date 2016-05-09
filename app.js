@@ -3,8 +3,6 @@ require('localenv');
 
 const express = require('express');
 const app = express();
-const Articles = require('./articles');
-const articles = new Articles();
 const bodyParser = require('body-parser');
 const exphbs  = require('express-handlebars');
 const Ddos = require('ddos');
@@ -22,7 +20,6 @@ app.set('views', './views');
 
 app.get('/', function (req, res) {
     let data = {
-        
     };
 
     res.render('index', data);
@@ -43,6 +40,8 @@ app.post('/post_article', function (req, res) {
         });
     });
 });
+
+app.use(require('./routes'));
 
 app.listen(port, function () {
     console.log('RallyMedia listening on port ' + port + '.');

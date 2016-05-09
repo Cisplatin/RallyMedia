@@ -1,14 +1,19 @@
 <html>
+    <head>
+        <title>Post New Article</title>
+        {{> head }}
+    </head>
     <body class="container">
         <form class="col-sm-8 col-sm-push-2" action="/post_article" method="post">
+            <h1 class="text-center">Post New Article</h1>
             <label for="title">Title:</label><br>
             <input type="text" class="form-control" id="title" name="article[title]"/>
             <br />
             <label for="author">Author:</label><br>
             <input type="text" class="form-control" id="author" name="article[author]"/>
             <br />
-            <label for="article">Article:</label><br>
-            <textarea id="article" class="form-control" name="article[article]"></textarea>
+            <label for="text">Text:</label><br>
+            <textarea id="text" class="form-control" name="article[text]"></textarea>
             <br />
             <label for="section">Section:</label><br>
             <select id="section" class="form-control"  name="article[section]">
