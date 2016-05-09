@@ -15,7 +15,7 @@ app.use('/bower_components', express.static('bower_components'));
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
-app.set('views', './templates');
+app.set('views', './views');
 
 app.get('/', function (req, res) {
     let data = {
