@@ -3,8 +3,6 @@ require('localenv');
 
 const express = require('express');
 const app = express();
-const Articles = require('./articles');
-const articles = new Articles();
 const bodyParser = require('body-parser');
 const exphbs  = require('express-handlebars');
 
@@ -17,26 +15,7 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
-app.get('/', function (req, res) {
-    let data = {
-        
-    };
-
-    res.render('index', data);
-});
-
-app.post('/post_article', function (req, res) {
-    let article = req.body.article;
-    articles.saveArticle(article, (err, id) => {
-        if (err) {
-            return res.render('error', {error: err});
-        }
-        article.id = id;
-        res.render('article_posted', {
-            article: article,
-        });
-    });
-});
+app.use(require('./routes'));
 
 app.listen(port, function () {
     console.log('RallyMedia listening on port ' + port + '.');
