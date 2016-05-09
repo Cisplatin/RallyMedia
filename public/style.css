@@ -11,8 +11,8 @@ body {
     height: 100%;
 }
 
-body {
-    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+.navbar-default {
+    background-color: white;
 }
 
 .img-portfolio {
@@ -94,4 +94,18 @@ footer {
     header.carousel .carousel {
         height: 70%;
     }
+}
+
+.custom-nav {
+    border-bottom: 0px;
+    border-top: 1px solid black;
+}
+
+.navbar-header {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.navbar {
+    border-bottom: 1px solid black;
 }
