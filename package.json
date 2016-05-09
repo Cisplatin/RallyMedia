@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Cisplatin/RallyMedia#readme",
   "dependencies": {
+    "async": "^1.5.2",
     "body-parser": "^1.15.1",
     "bower": "^1.7.9",
     "ddos": "^0.1.11",

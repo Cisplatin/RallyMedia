@@ -19,6 +19,13 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
+app.use(function (err, req, res, next) {
+    if (err) {
+        res.status(500).render('error', {error: err.toString()});
+    }
+    next();
+});
+
 app.listen(port, function () {
     console.log('RallyMedia listening on port ' + port + '.');
 });
