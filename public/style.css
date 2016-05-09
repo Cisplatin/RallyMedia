@@ -101,6 +101,10 @@ footer {
     border-top: 1px solid black;
 }
 
+.custom-nav {
+    background-color: black;
+}
+
 .navbar-header {
     margin-top: 10px;
     margin-left: 5px;
