@@ -1,0 +1,10 @@
+web:
+  build: .
+  environment:
+    - MONGODB_URI=mongodb://db/rally_media
+  ports:
+    - "3000:3000"
+  links:
+    - db
+db:
+  image: mongo
