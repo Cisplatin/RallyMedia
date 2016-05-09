@@ -1,4 +1,5 @@
 "use strict";
+require('localenv');
 
 const express = require('express');
 const app = express();
@@ -7,7 +8,7 @@ const articles = new Articles();
 const bodyParser = require('body-parser');
 const exphbs  = require('express-handlebars');
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 app.use('/bower_components', express.static('bower_components'));
@@ -18,20 +19,22 @@ app.set('views', './templates');
 
 app.get('/', function (req, res) {
     let data = {
-
+        
     };
 
     res.render('index', data);
 });
 
-app.get('/robots.txt', function (req, res) {
-    res.sendFile(__dirname + '/public/robots.txt');
-});
-
 app.post('/post_article', function (req, res) {
     let article = req.body.article;
     articles.saveArticle(article, (err, id) => {
-        res.send(err || id);
+        if (err) {
+            return res.render('error', {error: err});
+        }
+        article.id = id;
+        res.render('article_posted', {
+            article: article,
+        });
     });
 });
 

@@ -25,6 +25,7 @@ module.exports = class Articles {
         if (!this.db) {
             return callback(new Error('no db'));
         }
+        article.createdAt = new Date();
         this.articles.insertOne(article, (err, result) => {
             if (err || !result) {
                 return callback(err || new Error('save article failed'));
@@ -41,6 +42,15 @@ module.exports = class Articles {
         this.articles.find({
             section: section
         }).toArray(callback);
+    }
+
+    getMostRecentArticleBySection(section, callback) {
+        if (!this.db) {
+            return callback(new Error('no db'));
+        }
+        this.articles.find({
+            section: section
+        }).sort({createdAt: 1}).limit(1).next(callback);
     }
 
     getArticleById(id, callback) {

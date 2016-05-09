@@ -1,32 +1,42 @@
 <html>
-    <body>
-        <form action="/post_article" method="post">
+
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet">
+    <link href="media.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <body class="container">
+        <form class="col-sm-8 col-sm-push-2" action="/post_article" method="post">
             <label for="title">Title:</label><br>
-            <input type="text" id="title" name="article[title]"/>
+            <input type="text" class="form-control" id="title" name="article[title]"/>
             <br />
             <label for="author">Author:</label><br>
-            <input type="text" id="author" name="article[author]"/>
-            <br />
-            <label for="date">Date:</label><br>
-            <input type="text" id="date" name="article[date]"/>
+            <input type="text" class="form-control" id="author" name="article[author]"/>
             <br />
             <label for="article">Article:</label><br>
-            <textarea id="article" name="article[article]"></textarea>
+            <textarea id="article" class="form-control" name="article[article]"></textarea>
             <br />
             <label for="section">Section:</label><br>
-            <select id="section" name="article[section]">
+            <select id="section" class="form-control"  name="article[section]">
                 <option value="Art">Art</option>
                 <option value="Sport">Sport</option>
                 <option value="Lifestyle">Lifestyle</option>
             </select><br>
             <br />
             <label for="keywords">Keywords:</label><br>
-            <input type="text" id="keywords" name="article[keywords]"/>
+            <input type="text" class="form-control" id="keywords" name="article[keywords]"/>
             <br />
             <label for="secret">Secret:</label><br>
-            <input type="text" id="secret" name="article[secret]"/>
+            <input type="text" class="form-control" id="secret" name="article[secret]"/>
             <br />
-            <input type="submit" value="Submit Article" />
+            <input type="submit" class="btn btn-primary btn-block" value="Submit Article" />
         </form>
     </body>
 </html>
