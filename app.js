@@ -19,29 +19,6 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
-app.get('/', function (req, res) {
-    let data = {
-    };
-
-    res.render('index', data);
-});
-
-app.post('/post_article', function (req, res) {
-    if (req.body.article.secret !== process.env.secret) {
-        res.redirect('/');
-    }
-    let article = req.body.article;
-    article.saveArticle(article, (err, id) => {
-        if (err) {
-            return res.render('error', {error: err});
-        }
-        article.id = id;
-        res.render('article_posted', {
-            article: article,
-        });
-    });
-});
-
 app.listen(port, function () {
     console.log('RallyMedia listening on port ' + port + '.');
 });
