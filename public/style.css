@@ -113,3 +113,18 @@ footer {
 .navbar {
     border-bottom: 1px solid black;
 }
+
+.recent-articles {
+    border: 1px solid black;
+    padding: 0px;
+}
+
+.recent-articles > div {
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.recent-articles img {
+    width: 100%;
+}
