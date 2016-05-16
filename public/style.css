@@ -138,5 +138,14 @@ footer {
 }
 
 .header {
-    margin-left: 5%;
+    text-align: center;
 }
+
+.small-profile {
+    height: 180px;
+    margin: 10px;
+}
+
+/*.small-profile .caption {
+    padding: 
+}*/
