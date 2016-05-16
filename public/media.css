@@ -6,7 +6,7 @@
 	}
 
 	.custom-nav {
-		margin-left: 20%;
+		margin-left: 25%;
 		margin-top: 50px;
 	}
 
@@ -45,17 +45,21 @@
 	.container {
 		width: 100%;
 	}
+
+	.thumb-height {
+		height: 650px;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
 	
 	.navbar-brand {
-	    margin-top: 0px;
+	    margin-top: 0px!important;
 	    margin-left: 25px!important;
 	}
 
 	.custom-nav {
-		margin-left: 15%;
+		margin-left: 10%;
 		margin-top: 40px;
 	}
 
@@ -88,5 +92,9 @@
 	.custom-nav2 li a{
 		padding-top: 0px;
 		padding-bottom: 0px; 
+	}
+
+	.thumb-height {
+		height: 650px;
 	}
 }
