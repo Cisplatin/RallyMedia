@@ -6,13 +6,16 @@
     {{> default_head }}
 </head>
 <body>
-	{{> header }}
+	{{> header}}
 <div class="container-fluid">
-<h1>{{ article.title }}</h1>
-<img src="{{ article.imageUrl }}" alt="">
-<p>
-    {{ article.text }}
-</p>
+    <div class="col-sm-10 col-sm-push-1 article-body">
+
+        <h1>{{ article.title }} <small>by {{ article.author }}</small></h1>
+        <img src="{{ article.picture }}" alt="{{ article.picture }}">
+        <p>
+            {{{ article.text }}}
+        </p>
+    </div>
 </div>
 </body>
 </html>
