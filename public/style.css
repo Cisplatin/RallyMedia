@@ -146,13 +146,15 @@ footer {
     margin: 10px;
 }
 
-.article-body {
-    max-width: 60%;
-}
+
 
 .article-body p {
     line-height: 30px;
     font-size: 16px;
+}
+
+.article-body img {
+    max-width: 100%;
 }
 
 
