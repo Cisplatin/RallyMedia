@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rally Media - {{ section }}</title>
+    {{> default_head }}
+</head>
+<body>
+{{> header }}
+<div class="container">
+    <div class="col-sm-10 col-sm-push-1">
+        {{#each articles }}
+            <div class="row">
+                <h3>
+                    <a href="/article/{{ slug }}">
+                        {{ title }}
+                    </a>
+                    <small>by {{ author }}</small>
+                </h3>
+                <h5>{{ createdAt }}</h5>
+            </div>
+        {{/each}}
+    </div>
+</div>
+</body>
+</html>
