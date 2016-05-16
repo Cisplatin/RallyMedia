@@ -130,4 +130,13 @@ footer {
 }
 
 .thumb-height {
+    border: 0px!important;
+}
+
+.thumb-height > img {
+    max-width: 70%; 
+}
+
+.header {
+    margin-left: 5%;
 }
