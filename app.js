@@ -22,8 +22,9 @@ app.set('views', './views');
 app.use(function (err, req, res, next) {
     if (err) {
         res.status(500).render('error', {error: err.toString()});
+    } else {
+        next();
     }
-    next();
 });
 
 app.listen(port, function () {

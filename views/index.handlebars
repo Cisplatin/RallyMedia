@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    {{> header }}
+{{> header }}
 
 
 <!-- Page Content -->
@@ -15,30 +15,29 @@
 
     <!-- Marketing Icons Section -->
     <div class="row">
-        <div class="col-md-4 recent-articles">
-            <div class="img-box"><img alt="can't show the image" class="img-responsive img-hover"
-                                      src="http://placehold.it/700x450"/></div>
-            <div class="sub">
-                <span><h3>Heading</h3></span>
-                <span><h5>Sub-Heading</h5></span>
+        {{#each articles.recents}}
+            <div class="col-md-4 recent-articles">
+                <h2 class="text-center">
+                    {{sectionName}}
+                </h2>
+                <div class="img-box">
+                    <img alt="can't show the image"
+                         style="width: 700px; height: 450px;"
+                         class="img-responsive img-hover"
+                         src="{{picture}}"/>
+                </div>
+                <div class="sub">
+                    {{# if slug}}
+                        <a href="/article/{{slug}}">
+                            <span><h3>{{title}}</h3></span>
+                        </a>
+                    {{ else }}
+                        <span><h3>{{title}}</h3></span>
+                    {{/if}}
+                    <span><h5>by {{author}}</h5></span>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4 recent-articles">
-            <div class="img-box"><img alt="can't show the image" class="img-responsive img-hover"
-                                      src="http://placehold.it/700x450"/></div>
-            <div class="sub">
-                <span><h3>Heading</h3></span>
-                <span><h5>Sub-Heading</h5></span>
-            </div>
-        </div>
-        <div class="col-md-4 recent-articles">
-            <div class="img-box"><img alt="can't show the image" class="img-responsive img-hover"
-                                      src="http://placehold.it/700x450"/></div>
-            <div class="sub">
-                <span><h3>Heading</h3></span>
-                <span><h5>Sub-Heading</h5></span>
-            </div>
-        </div>
+        {{/each}}
     </div>
     <!-- /.row -->
 
