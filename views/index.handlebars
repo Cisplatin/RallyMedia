@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    {{> header }}
+{{> header }}
 
 
 <!-- Page Content -->
@@ -15,68 +15,61 @@
 
     <!-- Marketing Icons Section -->
     <div class="row">
-        <div class="col-md-4 recent-articles">
-            <div class="img-box"><img alt="can't show the image" class="img-responsive img-hover"
-                                      src="http://placehold.it/700x450"/></div>
-            <div class="sub">
-                <span><h3>Heading</h3></span>
-                <span><h5>Sub-Heading</h5></span>
+        {{#each articles.recents}}
+            <div class="col-md-4 recent-articles">
+                <h2 class="text-center">
+                    {{sectionName}}
+                </h2>
+                <a href="/article/{{slug}}">
+                <div class="img-box">
+                    <img alt="can't show the image"
+                         style="width: 700px; height: 450px;"
+                         class="img-responsive img-hover"
+                         src="{{picture}}"/>
+                </div>
+                </a>
+                <div class="sub">
+                    {{# if slug}}
+                        <a href="/article/{{slug}}">
+                            <span><h3>{{title}}</h3></span>
+                        </a>
+                    {{ else }}
+                        <span><h3>{{title}}</h3></span>
+                    {{/if}}
+                    <span><h5>by {{author}}</h5></span>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4 recent-articles">
-            <div class="img-box"><img alt="can't show the image" class="img-responsive img-hover"
-                                      src="http://placehold.it/700x450"/></div>
-            <div class="sub">
-                <span><h3>Heading</h3></span>
-                <span><h5>Sub-Heading</h5></span>
-            </div>
-        </div>
-        <div class="col-md-4 recent-articles">
-            <div class="img-box"><img alt="can't show the image" class="img-responsive img-hover"
-                                      src="http://placehold.it/700x450"/></div>
-            <div class="sub">
-                <span><h3>Heading</h3></span>
-                <span><h5>Sub-Heading</h5></span>
-            </div>
-        </div>
+        {{/each}}
     </div>
     <!-- /.row -->
 
     <!-- Portfolio Section -->
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Portfolio Heading</h2>
+            <h2 class="page-header">Articles</h2>
         </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
+        {{#each articles.all}}
+            <div class="row">
+                <div class="col-sm-2">
+                    {{#if picture}}
+                        <img src="{{ picture }}" width="110px" height="80px" alt="">
+                    {{ else }}
+                        <div></div>
+                    {{/if}}
+                </div>
+                <div class="col-sm-10">
+                    <h3>
+                        <a href="/article/{{ slug }}">
+                            {{ title }}
+                        </a>
+                        <small>by {{ author }}</small>
+                    </h3>
+                    <strong>{{sectionName}}</strong>
+                    <small>{{ createdAt }}</small>
+
+                </div>
+            </div>
+        {{/each}}
     </div>
     <!-- /.row -->
 

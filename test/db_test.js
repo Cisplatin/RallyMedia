@@ -7,7 +7,7 @@ let articles = new Articles(() => {
         section: 'lifestyle',
     }, (err, id) => {
         articles.getArticleById(id, (err, result) => {
-            articles.getArticlesBySection('lifestyle', (err, result) => {
+            articles.getAllArticles('lifestyle', (err, result) => {
                 console.log(result);
             });
         });
