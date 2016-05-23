@@ -52,6 +52,10 @@ header.carousel .fill {
     background-color: red !important;
 }
 
+.navbar-brand {
+    padding: 0px;
+}
+
 /* Pricing Page Styles */
 
 .price {
@@ -94,24 +98,6 @@ footer {
     header.carousel .carousel {
         height: 70%;
     }
-}
-
-.custom-nav {
-    border-bottom: 0px;
-    border-top: 1px solid black;
-}
-
-.custom-nav {
-    background-color: black;
-}
-
-.navbar-header {
-    margin-top: 10px;
-    margin-left: 5px;
-}
-
-.navbar {
-    border-bottom: 1px solid black;
 }
 
 .recent-articles {
