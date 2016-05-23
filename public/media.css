@@ -1,4 +1,4 @@
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1426px) {
 	
 	.navbar-brand {
 	    margin-top: 0px;
@@ -7,6 +7,94 @@
 
 	.custom-nav {
 		margin-left: 28%;
+		margin-top: 50px;
+	}
+
+	.custom-nav li {
+		border-right: 2px solid white; 
+		width: 100px;
+
+	}
+
+	.custom-nav li:last-child {
+		border-right: 1px solid black; 
+	}
+
+	.custom-nav2 {
+		margin-top: 65px;
+	}
+
+	.custom-nav li a {
+		text-align: center;
+		color: white!important;
+	}
+
+	.custom-nav li a:hover {
+		color: #ffcc00!important;
+	}
+
+	.custom-nav2 li:first-child {
+		border-right: 1px solid black; 
+	}
+
+	.custom-nav2 li:last-child{
+		border-left: 1px solid black; 
+	}
+
+	.custom-nav2 li a{
+		padding-top: 0px;
+		padding-bottom: 0px; 
+	}
+
+	.container {
+		width: 100%;
+	}
+
+	.thumb-height {
+		height: 650px;
+	}
+
+	.article-body {
+    	max-width: 60%;
+	}
+
+	.article-body h1 small {
+		font-size: 18px;
+	}
+
+	.custom-nav {
+	    border-bottom: 0px;
+	    border-top: 1px solid black;
+	}
+
+	.custom-nav {
+	    background-color: black;
+	}
+
+	.navbar-header {
+	    margin-top: 10px;
+	    margin-left: 5px;
+	}
+
+	.navbar {
+	    border-bottom: 1px solid black;
+	}
+
+	.navbar-brand img {
+		width: 180px;
+		height: 85px;
+	}
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1424px) {
+	
+	.navbar-brand {
+	    margin-top: 0px;
+	    margin-left: 15px!important;
+	}
+
+	.custom-nav {
+		margin-left: 22%;
 		margin-top: 50px;
 	}
 
