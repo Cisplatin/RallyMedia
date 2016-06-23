@@ -10,8 +10,10 @@
 <div class="container-fluid">
     <div class="col-sm-10 col-sm-push-1 article-body">
 
-        <h1>{{ article.title }} <small>by {{ article.author }}</small></h1>
-        <img src="{{ article.picture }}" alt="{{ article.picture }}">
+        <h1>{{ article.title }}
+        <br>
+        <small>by {{ article.author }}</small></h1>
+        <center><img src="{{ article.picture }}" alt="{{ article.picture }}"></center>
         <p>
             {{{ article.text }}}
         </p>
