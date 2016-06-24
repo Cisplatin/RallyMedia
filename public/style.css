@@ -11,6 +11,10 @@ body {
     height: 100%;
 }
 
+a {
+    cursor: pointer;
+}
+
 .navbar-default {
     background-color: white;
 }
@@ -101,18 +105,17 @@ footer {
 }
 
 .recent-articles {
-    border: 1px solid black;
     padding: 0px;
 }
 
 .recent-articles > div {
     width: 100%;
-    border: 1px solid black;
     text-align: center;
 }
 
 .recent-articles img {
     width: 100%;
+    padding: 10px;
 }
 
 .thumb-height {
@@ -139,6 +142,10 @@ footer {
     font-size: 16px;
 }
 
+.small-article-homepage {
+    margin-top: 10px;
+}
+
 .article-body img {
     max-width: 100%;
 }
@@ -148,6 +155,14 @@ footer {
     padding: 10px 5px;
     border-top: 1px solid #E8E5E5;
     border-bottom: 1px solid #E8E5E5;
+}
+
+.article-homepage {
+    margin-left: 10px;
+}
+
+.nav a {
+    cursor: pointer;
 }
 
 /*.small-profile .caption {
