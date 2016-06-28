@@ -9,6 +9,7 @@
 html,
 body {
     height: 100%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 a {
@@ -152,6 +153,7 @@ footer {
 
 
 .custom-header {
+    text-align: center;
     padding: 10px 5px;
     border-top: 1px solid #E8E5E5;
     border-bottom: 1px solid #E8E5E5;
